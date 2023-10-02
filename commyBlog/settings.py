@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ujuadimorade-djangobloc-0ocmmguc095.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['comm-blog-app-969a4d498b25.herokuapp.com', 'localhost','8000-ujuadimorade-djangobloc-0ocmmguc095.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -68,7 +68,7 @@ ROOT_URLCONF = 'commyBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,7 +141,7 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
