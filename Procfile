@@ -1,1 +1,1 @@
-web: gunicorn commyBlog.wsgi:application
+web: gunicorn comy_blog.wsgi:application
